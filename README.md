@@ -61,3 +61,53 @@ S3 as the name suggest is triple S we can say 3S but the name on amazon is S3 wh
 - Configure the permissions for the bucket to enable public access,
 - ensuring that the files can be accessed by anyone with the appropriate like.
 - Implement lifecycle policies to automate the management of our files.
+
+### Create S3 bucket and store a file in it
+
+Quick search for S3 in your AWS account and select S3
+
+![search for s3 bucket](./images/select-s3.png)
+
+Start creating the bucket
+
+- Name the bucket with unique name following Aws bucket naming convention
+
+![bucket-unique-name](./images/create-unique-bucket-name.png)
+
+- Determine access control list type for the bucket(ACLs)
+
+![Block ownership](./images/access-control-for-bucket.png)
+
+- Determine how the bucket can be accessed
+
+![block all public access to bucket](./images/block-all-public-access.png)
+
+- Disabled versioning of the bucket
+
+![disabled bucket versions](./images/disable-versioning.png)
+
+- Create the bucket, here you might find out your bucket name isn't unique, my advice is simply add more numbers to it.
+
+![click create the bucket](./images/create-the-bucket.png)
+
+- Created successfully message
+
+![success](./images/bucket-created.png)
+
+- Click on the created bucket name lets upload a file to it.
+
+![open the bucket](./images/lets-upload-data.png)
+
+- Create the file on the local machine to be uploaded
+
+![creating test file to be uploaded](./images/create-file-to-upload.png)
+
+- select file for upload
+
+![select file to be uploaded](./images/add-files.png)
+
+![file to upload](./images/upload-file.png)
+
+- Successfully uploaded the file message
+
+![success message](./images/file-upload-successful.png)
