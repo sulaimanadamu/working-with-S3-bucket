@@ -178,4 +178,12 @@ Every version of the file has different URL. so they are different files too.
 
 ### Lets Learn about Lifecycle policies
 
-Lifecycle policies basically allow aws to perform some task on an S3 such as transitioning the object from one class to another if not accessed often. 
+Lifecycle policies basically allow aws to perform some task on an S3 such as transitioning the object from one class to another if not accessed often. its a good way to reduce cost.
+
+![lifecycle policy step 1](./images/lifecycle-rule-creation-1.png)
+
+![lifecycle policy step 2](./images/lifecycle-rule-creation-2.png)
+
+successfully created the bucket lifecycle policy
+
+![successfully created lifecycle policy message](./images/lifecycle-successfully-created.png)
