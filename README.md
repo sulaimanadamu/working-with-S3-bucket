@@ -177,3 +177,5 @@ Click the file uploaded name now and copy the URL to a browser. this will automa
 Every version of the file has different URL. so they are different files too.
 
 ### Lets Learn about Lifecycle policies
+
+Lifecycle policies basically allow aws to perform some task on an S3 such as transitioning the object from one class to another if not accessed often. 
