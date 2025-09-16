@@ -111,3 +111,69 @@ Start creating the bucket
 - Successfully uploaded the file message
 
 ![success message](./images/file-upload-successful.png)
+
+### Enable Versioning
+
+lets see the current state of our version
+
+![properties state](./images/properties-of-bucket.png)
+
+click on `edit` which can be found on the top right.
+
+![enable versioning](./images/enable-bucket-versioning.png)
+
+update the file and reupload it.
+
+![update file](./images/updated-file-content.png)
+
+display the versions of the file by clicking `show version` as highlighted in this image.
+
+![display versions](./images/display-versions-in-s3-bucket.png)
+
+### Creating permission
+
+in the bucket permisson, change the access to allow public access
+
+![allow public access](./images/add-public-access-to-S3-buckets.png)
+
+define what the public can do to the bucket by clicking on bucket policy
+
+![edit bucket policy](./images/edit-bucket-policy.png)
+
+generate the bucket policy using an aws policy generator
+
+![generate policy](./images/select-policy-generator.png)
+
+before clicking on generate policy here, click add statement to 
+this will basically allow the creation of more than one policy and its important for the generation of any policy. 
+
+![generate policy statement](./images/generate-policy.png)
+
+Now click the generate policy, a window will pop up containing a json syntax like this;
+
+```javascript
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Statement1",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      "Resource": "arn:aws:s3:::testing-bucket-creation675/*"
+    }
+  ]
+}
+```
+
+past the policy in the bucket policy windown as shown below and save changes;
+
+![paste policy](./images/set-the-policy.png)
+
+Click the file uploaded name now and copy the URL to a browser. this will automatically download a copy of the file like in my case. it can also open it in some browser though depending on settings.
+Every version of the file has different URL. so they are different files too.
+
+### Lets Learn about Lifecycle policies
